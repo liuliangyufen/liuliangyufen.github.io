@@ -26,22 +26,41 @@ a:visited { }	/* 已被访问过 */
 .f_right { float:right;}
 .t_center { text-align:center;}
 
+/*让logo所在的hear区域全部填充页面宽度，删除了width和height
 .area { width:960px; margin:0 auto; overflow:hidden;}
+*/
+.area { margin:0 auto; overflow:hidden;}
+
 /* header */
+/*删除了height
 #header { height:149px; position:relative;overflow:hidden }
+*/
+#header { position:relative;overflow:hidden }
+/*这个height和menubox的height共同限制了logo，但是不能删，只能写数值
 #header .area{position:relative; height:149px; z-index:5000; }
+*/
+#header .area{position:relative; height:253px; z-index:5000; }
 #header .headerBg { widhth:50%; height:149px; position:absolute; left:50%; top:0;  background:url(../images/header_right_bg2.gif) left top repeat-x; z-index:200; overflow:hidden; }
 
+/*让logo全部填headerCont充页面宽度，删除了width和height
 #headerCont { width:960px; height:149px; position:absolute; background:url(../images/header_cont_bg.gif) left bottom no-repeat; left:0; top:0;  line-height:31px;  color:#fff; z-index:5000; }
+*/
+#headerCont { position:absolute; background:url(../images/header_cont_bg.gif) left bottom no-repeat; left:0; top:0;  line-height:31px;  color:#fff; z-index:5000; }
 #headerCont .top { height:31px; line-height:31px; color:#000; z-index:5000; }
 #headerCont .top div { height:21px; margin:4px 0; line-height:21px; padding:0; overflow:hidden;}
-#headerCont .top .f_left { text-indent:20px;}
-#headerCont .top span, #headerCont .top strong { font-size:13px; }
-#headerCont .top strong { color:#090909; font-size:18px; margin-right:40px; }
+#headerCont .top .f_left { text-indent:20px; font-size:20px; }
+#headerCont .top span, #headerCont .top strong { font-size:20px; }
+#headerCont .top strong { color:#090909; font-size:20px; margin-right:40px; }
 #headerCont .top div img { margin-top:-3px; /* 解决3pxBUG */}
 
+/*
 #headerCont .menuBox{ width:100%; height:118px; overflow:hidden; z-index:5000; }
-#headerCont .logo { width:252px; height:108px; padding:10px 0 0 15px; float:left; overflow:hidden; }
+*/
+#headerCont .menuBox{ width:100%; height:253px; overflow:hidden; z-index:5000; }
+/*让logo全部填充页面宽度，删除了width和height
+#headerCont .logo { width:1347px; height:253px; padding:auto; float:left; overflow:hidden; }
+*/
+#headerCont .logo { padding:auto; float:left; overflow:hidden; }
 #headerCont .menuBox .rightCont { width:690px; height:118px; float:left;  }
 #menu { width:690x; float:left; height:75px; display:block; margin-top:23px; margin-bottom:20px; margin-left:30px;  overflow:hidden;}
 #menu li { height:34px; background:url(../images/menu_bg.gif) left no-repeat;  margin-right:5px;*margin-right:4px; float:left; color:#fff;font-size:13px;  text-align:center; }
